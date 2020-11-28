@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(600, 450);
 }
 
 function draw() {
@@ -16,13 +16,14 @@ textAlign(CENTER);
 textSize(30);
 fill(255);
 textFont('Nerko One')
-text("Meteorites", 300, 50);
+text("Meteorites", 300, 70);
 
 for (let i = 0; i < data.meteorite.length; i++) {
   let annoyed = data.meteorite[i];
 
 noStroke();
-fill(255);  
+let m = map( )
+fill(m);  
 for (let x = 150; x < 500; x += 150) {
   for (let y = 150; y < 350; y += 90) {
 

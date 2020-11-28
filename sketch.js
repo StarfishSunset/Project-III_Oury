@@ -1,8 +1,9 @@
 let data;
-
+let img;
 
 function preload() {
   data = loadJSON("meteorite.json");
+  img = loadImage("austronaut.png")
 }
 
 function setup() {
@@ -11,6 +12,7 @@ function setup() {
 
 function draw() {
   background(1, 46, 64);
+  image(img, mouseX, mouseY, 70, 100);
 
 textAlign(CENTER);  
 textSize(30);
@@ -22,7 +24,8 @@ for (let i = 0; i < data.meteorite.length; i++) {
   let annoyed = data.meteorite[i];
 
 noStroke();
-let m = map( )
+
+let m = map(annoyed.mass, )
 fill(m);  
 for (let x = 150; x < 500; x += 150) {
   for (let y = 150; y < 350; y += 90) {
@@ -35,7 +38,12 @@ let b = annoyed.y
 textSize(20);
 text(t, a, b + 30)
 text(d, a, b + 50)
-    }
+
+  if (x > a && x < a && y > b && y < b) {
+let k = annoyed.name
+text(k, a + 30, b)
+  }
+}
   }
 }
 

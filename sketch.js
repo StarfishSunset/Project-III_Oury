@@ -18,10 +18,24 @@ fill(255);
 textFont('Nerko One')
 text("Meteorites", 300, 50);
 
-for (let m = 0; m < data.meteorite.length; m++) {
-  let annoyed = data.meteorite[m];
-  console.log(annoyed);
-  
+for (let i = 0; i < data.meteorite.length; i++) {
+  let annoyed = data.meteorite[i];
+
+noStroke();
+fill(255);  
+for (let x = 150; x < 500; x += 150) {
+  for (let y = 150; y < 350; y += 90) {
+
+    let d = annoyed.year
+ellipse(x, y, 20);
+ let t = annoyed.recclass 
+let a = annoyed.x
+let b = annoyed.y
+textSize(20);
+text(t, a, b + 30)
+text(d, a, b + 50)
+    }
+  }
 }
 
 }
